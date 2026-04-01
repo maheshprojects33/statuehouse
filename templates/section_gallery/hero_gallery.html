@@ -1,0 +1,51 @@
+{% load static %}
+<section class="hero hero-gallery" id="heroGallery">
+  <div class="hero__slideshow">
+    <div class="hero__slide active" 
+         data-title="Shakyamuni Buddha" 
+         data-description="A beautifully handcrafted brass statue of Shakyamuni Buddha in Bhumisparsha mudra, symbolizing the earth Witness gesture.">
+      <img src="{% static 'assets/images/gallery_hero.png' %}" alt="Shakyamuni Buddha Statue" class="hero-bg">
+    </div>
+    <div class="hero__slide" 
+         data-title="Green Tara" 
+         data-description="Elegant Green Tara statue in lotus position, radiating compassion and protection with her extended hand.">
+      <img src="{% static 'assets/images/gallery_hero1.png' %}" alt="Green Tara Statue" class="hero-bg">
+    </div>
+    <div class="hero__slide" 
+         data-title="Vajrapani" 
+         data-description="Powerful Vajrapani bronze statue depicting the Bodhisattva of Infinite Power and Protection.">
+      <img src="{% static 'assets/images/gallery_hero2.png' %}" alt="Vajrapani Statue" class="hero-bg">
+    </div>
+    <div class="hero__slide" 
+         data-title="White Tara" 
+         data-description="Serene White Tara statue with seven eyes, representing the all-seeing compassion of the awakened one.">
+      <img src="{% static 'assets/images/gallery_hero3.png' %}" alt="White Tara Statue" class="hero-bg">
+    </div>
+    <div class="hero__slide" 
+         data-title="Laxmi Mata" 
+         data-description="Golden Laxmi Mata statue, goddess of wealth and fortune, intricately carved with traditional motifs.">
+      <img src="{% static 'assets/images/gallery_hero4.png' %}" alt="Laxmi Mata Statue" class="hero-bg">
+    </div>
+  </div>
+  
+  <div class="hero-overlay"></div>
+
+  <button class="hero__nav hero__nav--prev" aria-label="Previous slide">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+  <button class="hero__nav hero__nav--next" aria-label="Next slide">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+
+  <div class="hero__indicators">
+    <button class="hero__indicator active" aria-label="Go to slide 1"></button>
+    <button class="hero__indicator" aria-label="Go to slide 2"></button>
+    <button class="hero__indicator" aria-label="Go to slide 3"></button>
+    <button class="hero__indicator" aria-label="Go to slide 4"></button>
+    <button class="hero__indicator" aria-label="Go to slide 5"></button>
+  </div>
+</section>

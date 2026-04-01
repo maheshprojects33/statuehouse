@@ -1,0 +1,128 @@
+/* ============================================================
+   Hero Gallery Slideshow Styles
+   ============================================================ */
+
+.hero-gallery.hero {
+  padding-top: 5rem;
+}
+
+.hero__slideshow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+  transform: translateX(100%);
+}
+
+.hero__slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.hero__slide.prev {
+  transform: translateX(-100%);
+}
+
+.hero__slide .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: var(--foreground);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.hero__nav:hover {
+  background: var(--primary-foreground);
+  color: var(--foreground);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero__nav:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.hero__nav--prev {
+  left: 1.5rem;
+}
+
+.hero__nav--next {
+  right: 1.5rem;
+}
+
+.hero__indicators {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.hero__indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.hero__indicator.active,
+.hero__indicator:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.3);
+}
+
+@media (max-width: 640px) {
+  .hero__nav {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .hero__nav--prev {
+    left: 0.75rem;
+  }
+
+  .hero__nav--next {
+    right: 0.75rem;
+  }
+
+  .hero-gallery .hero__content {
+    bottom: 3rem;
+  }
+}

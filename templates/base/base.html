@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statue House — Handmade Statues from Nepal</title>
+  <meta name="description" content="Premium handcrafted statues from Kathmandu, Nepal. Buddha, Hindu deities, animal figures & abstract sculptures in brass, wood, marble & stone.">
+  <meta name="author" content="Statue House">
+  <link rel="canonical" href="https://statuehouse.com">
+  <meta property="og:title" content="Statue House — Handmade Statues from Nepal">
+  <meta property="og:description" content="Premium handcrafted statues from Kathmandu, Nepal. Brass, wood, marble & stone sculptures by master artisans.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{% static 'assets/images/favicon.png' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/hero-gallery.css' %}">
+</head>
+<body>
+    <!--  NavBar  -->
+    {% include 'base/navbar.html' %}
+    
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+     {% include "base/footer.html" %}
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="modal-backdrop"></div>
+
+  <script src="{% static 'assets/js/script.js' %}" defer></script>
+  <script src="{% static 'assets/js/hero-gallery.js' %}" defer></script>
+</body>
+</html>
