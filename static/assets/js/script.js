@@ -330,7 +330,7 @@ function openModal(productId) {
             </div>
             <p class="modal-price">NPR ${product.price.toLocaleString()}</p>
           </div>
-          <a href="contact.html?product=${encodeURIComponent(product.name)}" class="btn-gold modal-inquire">Inquire Now</a>
+          <a href="/contact/?product=${encodeURIComponent(product.name)}" class="btn-gold modal-inquire">Inquire Now</a>
         </div>
       </div>
     </div>`;

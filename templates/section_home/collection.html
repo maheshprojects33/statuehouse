@@ -6,7 +6,7 @@
       <h2 class="heading-lg">Our Collection</h2>
     </div>
     <div class="category-grid">
-      <a href="gallery.html?category=Buddha" class="category-card anim-section" data-delay="0">
+      <a href="{% url 'gallery' %}?category=Buddha" class="category-card anim-section" data-delay="0">
         <img src="{% static 'assets/images/buddha.jpg' %}" alt="Buddha statues collection" loading="lazy" />
         <div class="category-card-overlay"></div>
         <div class="category-card-text">
@@ -15,7 +15,7 @@
           </div>
         </div>
       </a>
-      <a href="gallery.html?category=Deity" class="category-card anim-section" data-delay="0.1">
+      <a href="{% url 'gallery' %}?category=Deity" class="category-card anim-section" data-delay="0.1">
         <img src="{% static 'assets/images/tara.jpg' %}" alt="Deity statues collection" loading="lazy" />
         <div class="category-card-overlay"></div>
         <div class="category-card-text">
@@ -24,7 +24,7 @@
           </div>
         </div>
       </a>
-      <a href="gallery.html?category=Animal" class="category-card anim-section" data-delay="0.2">
+      <a href="{% url 'gallery' %}?category=Animal" class="category-card anim-section" data-delay="0.2">
         <img src="{% static 'assets/images/guru.jpg' %}" alt="Animal statues collection" loading="lazy" />
         <div class="category-card-overlay"></div>
         <div class="category-card-text">
@@ -33,7 +33,7 @@
           </div>
         </div>
       </a>
-      <a href="gallery.html?category=Abstract" class="category-card anim-section" data-delay="0.3">
+      <a href="{% url 'gallery' %}?category=Abstract" class="category-card anim-section" data-delay="0.3">
         <img src="{% static 'assets/images/dzambhala.jpg' %}" alt="Abstract sculptures collection" loading="lazy" />
         <div class="category-card-overlay"></div>
         <div class="category-card-text">
